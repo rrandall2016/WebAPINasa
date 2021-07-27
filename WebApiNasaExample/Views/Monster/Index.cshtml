@@ -1,0 +1,20 @@
+﻿@model ResultObject
+@{
+    ViewData["Title"] = "DD Page";
+}
+
+
+<div class="text-center">
+    <h1 class="display-4">Welcome to DD</h1>
+    @{for (int i = 0; i < 4; i++)
+        {
+            <a asp-controller="Monster"
+               asp-action="Details"
+               asp-route-id="@Model.Results[i].Index">@Model.Results[i].Name</a>
+            <p>@Model.Results[i].Index</p>
+
+        }
+    }
+
+</div>
+
